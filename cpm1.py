@@ -9,10 +9,17 @@ FIREBASE_API_KEY = 'AIzaSyBW1ZbMiUeDZHYUO2bY8Bfnf5rRgrQGPTM'
 FIREBASE_LOGIN_URL = f"https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key={FIREBASE_API_KEY}"
 RANK_URL = "https://us-central1-cp-multiplayer.cloudfunctions.net/SetUserRating4"
 
+# --- Multiple accounts list (SAFE) ---
+ACCOUNTS = [
+    {"email": "cpmcpmking2@gmail.com", "password": "666666"},
+    {"email": "cpmcpmking3@gmail.com", "password": "666666"},
+    {"email": "cpmcpmking4@gmail.com", "password": "666666"},
+]
+
 
 def login(email, password):
     """Login to CPM using Firebase API."""
-    print("\n🔐 Logging in...")
+    print(f"\n🔐 Logging in as {email}...")
     payload = {
         "clientType": "CLIENT_TYPE_ANDROID",
         "email": email,
@@ -73,20 +80,23 @@ def set_rank(token):
 
 
 def main_logic():
-    """Main loop for user input and processing."""
-    while True:
-        print("\nKing Rank Script (telegram removed)")
-        try:
-            email = input("📧 Enter email: ").strip()
-            password = input("🔒 Enter password: ").strip()
-        except (EOFError, KeyboardInterrupt):
-            print("\nExiting...")
-            break
+    """Automatic processing of multiple accounts."""
+    print("\nKing Rank Script (SAFE MODE, MULTI ACCOUNT ENABLED)")
+
+    for acc in ACCOUNTS:
+        email = acc["email"]
+        password = acc["password"]
+
+        print(f"\n➡️ Processing account: {email}")
 
         auth_token = login(email, password)
         if auth_token:
             if set_rank(auth_token):
-                print("\n✅ Finished.")
+                print("✅ Finished for this account.")
+            else:
+                print("❌ Rank failed.")
+        else:
+            print("❌ Login failed for this account.")
 
 
 if __name__ == "__main__":
