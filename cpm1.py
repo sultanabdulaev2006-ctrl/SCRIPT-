@@ -15,7 +15,7 @@ ACCOUNTS = [
     {"email": "cpmcpmking2@gmail.com", "password": "666666"},
     {"email": "cpmcpmking3@gmail.com", "password": "666666"},
     {"email": "cpmcpmking4@gmail.com", "password": "666666"},
-     {"email": "cpmcpmking5@gmail.com", "password": "666666"},
+    {"email": "cpmcpmking5@gmail.com", "password": "666666"},
     {"email": "cpmcpmking6@gmail.com", "password": "666666"},
     {"email": "cpmcpmking7@gmail.com", "password": "666666"},
     {"email": "cpmcpmking8@gmail.com", "password": "666666"},
@@ -38,6 +38,15 @@ ACCOUNTS = [
     {"email": "cpmcpmking25@gmail.com", "password": "666666"},
     {"email": "cpmcpmking26@gmail.com", "password": "666666"},
     {"email": "cpmcpmking27@gmail.com", "password": "666666"},
+    {"email": "cpmcpmking28@gmail.com", "password": "666666"},
+    {"email": "cpmcpmking29@gmail.com", "password": "666666"},
+    {"email": "cpmcpmking30@gmail.com", "password": "666666"},
+    {"email": "cpmcpmking31@gmail.com", "password": "666666"},
+    {"email": "cpmcpmking32@gmail.com", "password": "666666"},
+    {"email": "cpmcpmking33@gmail.com", "password": "666666"},
+    {"email": "cpmcpmking34@gmail.com", "password": "666666"},
+    {"email": "cpmcpmking35@gmail.com", "password": "666666"},
+    {"email": "cpmcpmking36@gmail.com", "password": "666666"},
 ]
 
 
