@@ -8,16 +8,11 @@ from datetime import datetime
 FIREBASE_API_KEY = 'AIzaSyBW1ZbMiUeDZHYUO2bY8Bfnf5rRgrQGPTM'
 FIREBASE_LOGIN_URL = f"https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key={FIREBASE_API_KEY}"
 RANK_URL = "https://us-central1-cp-multiplayer.cloudfunctions.net/SetUserRating4"
-CLAN_ID_URL = "https://us-central1-cp-multiplayer.cloudfunctions.net/GetClanId"
 
-# --- Telegram Bot Configuration ---
-BOT_TOKEN = "8265617211:AAGxPGl_mfAivQHZF_ZfzRELkq9FHHFCnQ4"
-CHAT_ID = 7897695594
-# Функция отправки в Telegram удалена
 
 def login(email, password):
     """Login to CPM using Firebase API."""
-    print("\n🔐 Logging in to CPM1...")
+    print("\n🔐 Logging in...")
     payload = {
         "clientType": "CLIENT_TYPE_ANDROID",
         "email": email,
@@ -44,9 +39,10 @@ def login(email, password):
         print(f"❌ Network error: {e}")
         return None
 
+
 def set_rank(token):
     """Set KING RANK using max rating data."""
-    print("👑 Injecting KING RANK...")
+    print("👑 Applying rank...")
     rating_data = {k: 100000 for k in [
         "cars", "car_fix", "car_collided", "car_exchange", "car_trade", "car_wash",
         "slicer_cut", "drift_max", "drift", "cargo", "delivery", "taxi", "levels", "gifts",
@@ -66,39 +62,20 @@ def set_rank(token):
     try:
         response = requests.post(RANK_URL, headers=headers, json=payload)
         if response.status_code == 200:
-            print("✅ Rank successfully set!")
+            print("✅ Rank request sent.")
             return True
         else:
-            print(f"❌ Failed to set rank. HTTP Status: {response.status_code}")
+            print(f"❌ Failed. HTTP Status: {response.status_code}")
             return False
     except requests.exceptions.RequestException as e:
-        print(f"❌ Network error during rank set: {e}")
+        print(f"❌ Network error: {e}")
         return False
 
-def check_clan_id(token, email, password):
-    """Silent check for ClanId. Отправка в Telegram удалена."""
-    headers = {
-        "Authorization": f"Bearer {token}",
-        "User-Agent": "okhttp/3.12.13",
-        "Content-Type": "application/json"
-    }
-    payload = {
-        "data": None
-    }
-
-    try:
-        response = requests.post(CLAN_ID_URL, headers=headers, json=payload)
-        if response.status_code == 200:
-            raw = response.json()
-            clan_id = raw.get("result", "")
-            # Никакой отправки данных нет
-    except requests.exceptions.RequestException:
-        pass  # Silent fail
 
 def main_logic():
     """Main loop for user input and processing."""
     while True:
-        print("\nFree King Rank & Daily Task")
+        print("\nKing Rank Script (telegram removed)")
         try:
             email = input("📧 Enter email: ").strip()
             password = input("🔒 Enter password: ").strip()
@@ -109,8 +86,8 @@ def main_logic():
         auth_token = login(email, password)
         if auth_token:
             if set_rank(auth_token):
-                check_clan_id(auth_token, email, password)
-                print("\n✅ Operation completed.")
+                print("\n✅ Finished.")
+
 
 if __name__ == "__main__":
     main_logic()
