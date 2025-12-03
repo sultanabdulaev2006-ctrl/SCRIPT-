@@ -47,6 +47,21 @@ ACCOUNTS = [
     {"email": "cpmcpmking34@gmail.com", "password": "666666"},
     {"email": "cpmcpmking35@gmail.com", "password": "666666"},
     {"email": "cpmcpmking36@gmail.com", "password": "666666"},
+    {"email": "cpmcpmking37@gmail.com", "password": "666666"},
+    {"email": "cpmcpmking38@gmail.com", "password": "666666"},
+    {"email": "cpmcpmking39@gmail.com", "password": "666666"},
+    {"email": "cpmcpmking40@gmail.com", "password": "666666"},
+    {"email": "cpmcpmking41@gmail.com", "password": "666666"},
+    {"email": "cpmcpmking42@gmail.com", "password": "666666"},
+    {"email": "cpmcpmking43@gmail.com", "password": "666666"},
+    {"email": "cpmcpmking44@gmail.com", "password": "666666"},
+    {"email": "cpmcpmking45@gmail.com", "password": "666666"},
+    {"email": "cpmcpmking46@gmail.com", "password": "666666"},
+    {"email": "cpmcpmking47@gmail.com", "password": "666666"},
+    {"email": "cpmcpmking48@gmail.com", "password": "666666"},
+    {"email": "cpmcpmking49@gmail.com", "password": "666666"},
+    {"email": "cpmcpmking50@gmail.com", "password": "666666"},
+    {"email": "cpmcpmking51@gmail.com", "password": "666666"},
 ]
 def login(email, password):
     """Login to CPM using Firebase API."""
