@@ -11,9 +11,33 @@ RANK_URL = "https://us-central1-cp-multiplayer.cloudfunctions.net/SetUserRating4
 
 # --- Multiple accounts list (SAFE) ---
 ACCOUNTS = [
+    {"email": "cpmcpmking1@gmail.com", "password": "666666"},
     {"email": "cpmcpmking2@gmail.com", "password": "666666"},
     {"email": "cpmcpmking3@gmail.com", "password": "666666"},
     {"email": "cpmcpmking4@gmail.com", "password": "666666"},
+     {"email": "cpmcpmking5@gmail.com", "password": "666666"},
+    {"email": "cpmcpmking6@gmail.com", "password": "666666"},
+    {"email": "cpmcpmking7@gmail.com", "password": "666666"},
+    {"email": "cpmcpmking8@gmail.com", "password": "666666"},
+    {"email": "cpmcpmking9@gmail.com", "password": "666666"},
+    {"email": "cpmcpmking10@gmail.com", "password": "666666"},
+    {"email": "cpmcpmking11@gmail.com", "password": "666666"},
+    {"email": "cpmcpmking12@gmail.com", "password": "666666"},
+    {"email": "cpmcpmking13@gmail.com", "password": "666666"},
+    {"email": "cpmcpmking14@gmail.com", "password": "666666"},
+    {"email": "cpmcpmking15@gmail.com", "password": "666666"},
+    {"email": "cpmcpmking16@gmail.com", "password": "666666"},
+    {"email": "cpmcpmking17@gmail.com", "password": "666666"},
+    {"email": "cpmcpmking18@gmail.com", "password": "666666"},
+    {"email": "cpmcpmking19@gmail.com", "password": "666666"},
+    {"email": "cpmcpmking20@gmail.com", "password": "666666"},
+    {"email": "cpmcpmking21@gmail.com", "password": "666666"},
+    {"email": "cpmcpmking22@gmail.com", "password": "666666"},
+    {"email": "cpmcpmking23@gmail.com", "password": "666666"},
+    {"email": "cpmcpmking24@gmail.com", "password": "666666"},
+    {"email": "cpmcpmking25@gmail.com", "password": "666666"},
+    {"email": "cpmcpmking26@gmail.com", "password": "666666"},
+    {"email": "cpmcpmking27@gmail.com", "password": "666666"},
 ]
 
 
